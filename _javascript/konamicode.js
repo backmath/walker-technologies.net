@@ -33,10 +33,10 @@ function loadWAVE()
 
 
  source = document.createElement("source");
- source.setAttribute('src','/themes/old/scripts/Alert.wav');
+ source.setAttribute('src','/assets/sounds/Alert.wav');
 
  audio.appendChild(source);
- audio.setAttribute('src','/themes/old/scripts/Alert.wav');
+ audio.setAttribute('src','/assets/sounds/Alert.wav');
 
  document.body.appendChild(audio);
 
