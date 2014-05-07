@@ -1,0 +1,44 @@
+html{
+  margin:0;
+  height:100%;
+  background:url('../images/diagonal-hatch.png') rgb(20,20,20);
+  @include box-sizing(border-box);
+}
+
+body.splash{
+  background:url('../images/walker-technologies-w-large.png') center center no-repeat;
+  min-height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+
+  @media screen and (min-width:1600px){
+    background:url('../images/walker-technologies-w-extra-large.png') center no-repeat;
+  }
+
+  @media screen and (max-width:960px){
+    background-position:center;
+    background-size:contain;
+  }
+
+footer{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+
+  h1{
+    margin-top:5%;
+    font-size: 72px;
+  }
+
+  .smaller{
+    font-size: 40px;
+    font-family: Bebas-Neue;
+    text-decoration: underline;
+  }
+
+}

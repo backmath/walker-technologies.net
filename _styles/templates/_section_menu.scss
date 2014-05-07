@@ -1,0 +1,67 @@
+#section-menu{
+ @include box-sizing(border-box);
+ @include rem(padding,16px);
+ background: url('../images/diagonal-hatch.png') rgb(20, 20, 20);
+ border:1px solid black;
+ display:inline-block;
+ float:left;
+ text-align:center;
+ width:30%;
+
+ @media screen and (max-width:720px) {
+  float:none;
+  width:100%;
+  @include rem(padding,16px 8px);
+ }
+
+ li:not(:last-of-type){
+  @include rem(margin-bottom,16px);
+ }
+
+ li{
+  @media screen and (max-width:720px) and (min-width:600px){
+   float: left;
+   width: 46%;
+   margin: 2%;
+  }
+
+ }
+
+ li:last-of-type:nth-of-type(2n-1){
+  @media screen and (max-width:720px) and (min-width:600px){
+   width:96%;
+  }
+ }
+}
+
+.services-button{
+ float:none;
+ width:100%;
+ display:inline-block;
+ height:auto;
+ @include rem(font-size,32px);
+ @include rem(padding,0 0 16px);
+
+ .nav-style.top{
+  @include rem(margin-bottom, 16px);
+ }
+
+
+}
+
+
+#section-wrapper{
+ display:inline-block;
+ @include box-sizing(border-box);
+ @include rem(padding-left,32px);
+ float:left;
+ width: 70%;
+
+ @media screen and (max-width:720px){
+  width:100%;
+  @include rem(padding-top,16px);
+  padding-left:0;
+  float:none;
+
+ }
+}

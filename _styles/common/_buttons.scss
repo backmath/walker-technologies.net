@@ -1,0 +1,67 @@
+.walker-button{
+ @include rem(height,80px);
+ font-family: Bebas-Neue;
+ text-decoration: none;
+ float: left;
+ color: $walker-red-alternate;
+ cursor:pointer;
+ @include box-shadow(black 0 0 15px);
+ @include rem(font-size,48px);
+ background:url('../images/hatch.png') rgb(20,20,20);
+
+ .nav-style{
+  width:1px;
+  height:100%;
+  display:inline-block;
+  float:left;
+
+
+  &.left{
+   @include rem(margin-right,32px);
+   @include background-image(linear-gradient(top, transparent 0%, $faded-gray 50%, transparent 100%));
+  }
+
+  &.right{
+   @include rem(margin-left,32px);
+   float:right;
+   @include background-image(linear-gradient(top, transparent 0%, $faded-gray 50%, transparent 100%));
+  }
+
+  &.top{
+   height:1px;
+   width:100%;
+   display:block;
+   clear:both;
+   background:none;
+  }
+ }
+
+ &.active,
+ &:hover,
+ &.active-link {
+  @include text-shadow(black 5px 5px 5px);
+  @include box-shadow(black 0 5px 20px inset);
+  color:$walker-red;
+
+  .nav-style{
+
+   &.left,
+   &.right{
+    background:none;
+   }
+
+  }
+ }
+ &.active-link{
+  color:$walker-red;
+  background:rgba(0,0,0,0.2);
+  @include text-shadow(rgba(200,0,0,1) 0 0 8px);
+  @include box-shadow(black 0 0 15px);
+  @include box-shadow(black 0 5px 20px inset, black 0 0 3px);
+   .top{
+
+    @include background-image(linear-gradient(left, $walker-red-alternate-transparent 0%,$walker-red 35%, rgb(255,200,200) 50%, $walker-red 65%, $walker-red-alternate-transparent 100%));
+
+   }
+ }
+}

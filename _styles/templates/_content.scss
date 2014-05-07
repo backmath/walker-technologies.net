@@ -1,0 +1,130 @@
+#content-wrapper{
+ max-width:1600px;
+ margin:0px auto;
+ height:100%;
+ position:relative;
+ border-top:1px solid $faded-gray;
+ border-bottom:1px solid $faded-gray;
+ @include box-sizing(border-box);
+ @include rem(padding,32px);
+ @include background-image(linear-gradient(top, rgba(80,80,80,0.1) 0%, transparent 200px, transparent 90%, rgba(80,80,80,0.1) 100%));
+
+ overflow: auto;
+
+  @media screen and (max-width:1440px){
+    width:1200px;
+  }
+
+  @media screen and (max-width:1280px){
+    width:960px;
+  }
+
+  @media screen and (max-width:1024px){
+    width:720px;
+  }
+
+  @media screen and (max-width:960px){
+    width:96%;
+    margin:0 2%;
+    @include rem(padding, 16px);
+  }
+
+}
+
+.content-wrapper{
+
+ &.vertical{
+  width:1px;
+  height:200px;
+  display: inline-block;
+  position:absolute;
+  @include background-image(linear-gradient(top, $faded-gray 0%, transparent 10%, transparent 90%,$faded-gray 100%));
+ }
+
+ &.top{
+  top:0;
+  @include background-image(linear-gradient(top, $faded-gray 0%, transparent 50%));
+  @include rem(margin-bottom,16px);
+ }
+
+ &.bottom{
+  bottom:0;
+  @include background-image(linear-gradient(bottom, $faded-gray 0%, transparent 50%));
+  @include rem(margin-top,16px);
+ }
+
+ &.left{
+  left:0;
+  @include rem(margin-right,16px);
+ }
+
+ &.right{
+  right:0;
+  @include rem(margin-left,16px);
+ }
+
+
+}
+
+.service-paragraph {
+
+  @include rem(font-size,20px);
+  @include rem(margin-bottom,12px);
+  @include rem(margin-left,24px);
+}
+
+.service-h3{
+
+  @include rem(font-size,20px);
+  @include rem(margin-bottom,16px);
+  @include rem(margin-left,12px);
+}
+
+.service-h2{
+  @include rem(margin-bottom,12px);
+  text-decoration: underline;
+}
+
+.service-list {
+  color:white;
+  @include rem(margin-left,24px);
+
+}
+.service-list-item {
+  @include rem(margin-bottom,12px);
+  @include rem(font-size,16px);
+}
+
+.errorMessage {
+  font-weight: bold;
+  max-width: 92%;
+  width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  color:red;
+  position: relative;
+}
+
+.flash-success {
+  @include rem(font-size,24px);
+  font-weight: bold;
+  font-family: Bebas-Neue;
+  color: #FFF;
+  text-align: center;
+
+}
+
+.back-to-top {
+
+  @include rem(margin-left,24px);
+  color:$walker-red-alternate;
+  text-decoration: underline;
+  cursor:pointer;
+  @media screen and (min-height:900px) {
+    display: none;
+  }
+}
+
+.contact-us-directions{
+  text-align: center;
+}

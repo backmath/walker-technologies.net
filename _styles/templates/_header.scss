@@ -1,0 +1,217 @@
+html{
+  margin:0;
+  height:100%;
+  background:url('../images/diagonal-hatch.png') rgb(20,20,20);
+  @include box-sizing(border-box);
+}
+
+body{
+  background:url('../images/walker-technologies-w-large.png') center 275px no-repeat;
+  min-height: 100%;
+
+  &.front-page{
+    background-position:center 240px;
+  }
+
+  @media screen and (min-width:1600px){
+    background:url('../images/walker-technologies-w-extra-large.png') center 200px no-repeat;
+  }
+
+  @media screen and (max-width:960px){
+    background-position:center 600px;
+  }
+}
+
+header{
+  width: 100%;
+  background:url('../images/hatch-long.png') repeat-x;
+  color: $layout-border;
+  position:relative;
+
+
+  ul{
+
+    float:right;
+    display:inline-block;
+
+  }
+
+  li{
+    float:left;
+  }
+}
+
+address{
+  @include rem(height,48px);
+
+  position:absolute;
+  right:0;
+
+  @media screen and (max-width:960px){
+    display:none;
+  }
+
+  li{
+    @include rem('line-height',48px);
+    @include rem('padding-right',32px);
+    color:rgb(255,200,200);
+  }
+
+  a{
+    @include rem('line-height',48px);
+
+  }
+}
+
+#navigation{
+  @include rem('height',220px);
+  @include rem('padding-top',36px);
+
+  @media screen and (max-width:1024px){
+    height:auto;
+  }
+
+  @media screen and (max-width:720px){
+    @include rem(padding-top,16px);
+  }
+
+  ul{
+    position:relative;
+    @include rem(height,80px);
+    @include rem(top, 68px);
+
+    @media screen and (max-width:1024px)
+    {
+      width:100%;
+      background-position:center center;
+      position:relative;
+      display:block;
+      top:0;
+      float:none;
+    }
+
+    @media screen and (max-width:960px){
+      @include rem(height,288px);
+    }
+
+  }
+
+  li{
+    @include rem('font-size',48px);
+    @include rem('height',80px);
+    @include rem('line-height',80px);
+    @include rem('margin-right',16px);
+
+    text-transform: uppercase;
+    border-radius: 4px;
+    border-right:1px solid black;
+    border-left:1px solid black;
+    border-top:1px solid transparent;
+    display:inline-block;
+
+    @media screen and (max-width:1024px)
+    {
+      width:31.3333333333333333333%;
+      margin:1%;
+      @include box-sizing(border-box);
+      background-position:center center;
+      position:relative;
+      display:block;
+
+      & a{
+        width:100%;
+        text-align: center;
+      }
+
+    }
+
+    @media screen and (max-width:960px){
+      width:96%;
+      margin:8px 2%;
+    }
+  }
+
+}
+#walker-technologies-globe{
+  width:324px;
+  height:200px;
+  background:url('../images/walker-technologies-globe.png') no-repeat;
+  background-size:cover;
+  @media screen and (max-width:1300px)
+  {
+    width:250px;
+    height:154px;
+  }
+}
+
+#walker-logo{
+  background-image:url('../images/walker-technologies-inline.png');
+  background-repeat:no-repeat;
+  background-position:left;
+  height:200px;
+  width:675px;
+  display:inline-block;
+  position:absolute;
+  text-decoration:none;
+  text-indent:-9999px;
+
+  @include rem('margin-left',32px);
+
+  @media screen and (max-width:1400px)
+  {
+    width:500px;
+    background-image:url('../images/walker-technologies-inline-small.png');
+  }
+
+  @media screen and (max-width:1280px)
+  {
+    width:300px;
+    background-image:url('../images/walker-technologies-stacked.png');
+  }
+
+  @media screen and (max-width:1024px)
+  {
+    margin:0 auto;
+    background-position:center center;
+    position:relative;
+    display:block;
+  }
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+    background-size:265px 200px;
+    background-image:url('../images/walker-technologies-stacked@2x.png');
+}
+
+
+
+}
+.h1-group{
+  @include rem(height,40px);
+  @include rem(top,-32px);
+  @include rem(margin-bottom,16px);
+  position:relative;
+  height:auto;
+
+  @media screen and (max-width:1024px){
+    top:0;
+    @include rem(margin,32px 0)
+  }
+
+}
+.walker-splitter{
+  position:absolute;
+  bottom:0;
+  height:1px;
+  width:100%;
+  @include background-image(linear-gradient(left, transparent 0%, $walker-red-alternate 50%, transparent 100%));
+}
+
+#slideshow{
+  text-align: center;
+}

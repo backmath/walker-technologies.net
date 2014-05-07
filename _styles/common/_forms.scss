@@ -1,0 +1,49 @@
+label,
+input,
+textarea{
+  margin:0 auto;
+  clear:both;
+  display:block;
+}
+
+input,
+textarea{
+  background-color:rgba(0,0,0,0.5);
+  border: 1px solid $walker-red-alpha;
+  max-width: 92%;
+  width:480px;
+  color:white;
+  min-height: 32px;
+  font-size: 24px;
+  padding: 0 8px;
+  outline:none;
+
+  @include box-sizing(border-box);
+
+  &:focus{
+    @include box-shadow($walker-red 0 0 4px);
+
+    outline: none;
+    box-shadow: 1px $walker-red-alpha;
+  }
+}
+
+input{
+  text-align: center;
+}
+
+label{
+  text-align: center;
+  margin: 6px 0;
+  font-family: "DroidSans-Bold";
+  color:white;
+}
+
+[type="submit"]{
+  margin:12px auto;
+  display:block;
+  float:none;
+  width:480px;
+  max-width: 92%;
+  border:none;
+}
