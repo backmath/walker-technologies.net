@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-  var dest = 'public/assets/js/';
+  var dest = 'assets/javascript/';
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
       },
       dist: {
-        src: ['javascript_src/!(widget-instantiation).js', 'javascript_src/widget-instantiation.js'],
+        src: ['_javascript/*.js'],
         dest: dest + '<%= pkg.name %>.js'
       }
     },
